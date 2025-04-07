@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background: url(https://media.istockphoto.com/id/1145578527/photo/blur-image-of-fast-food-restaurant-use-for-defocused-background.jpg?s=612x612&w=0&k=20&c=vDambt1ORG-de-3etsAzmxZPT49Tk-VJp89GX84Zny8=);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 4.5rem;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    color:black;
+}
+
+#text{
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    nav-index: auto;
+
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: auto;
+    border: #171313;
+}
+
+.menu-item {
+    background-color: #797272;
+    border: 1px solid #171313;
+    border-radius: 8px;
+    width: 20%;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu-item h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.menu-item p {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.icon {
+    height: 30vh;
+    width:30vh;
+    margin-bottom: 10px;
+}
+
+/* @media screen and (max-width: 768px) {
+    .menu-item {
+        width: 100%;
+    }
+} */
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for menu items */
+.menu-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 20%;
+    padding: 20px;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 0.5s forwards; /* Apply animation */
+}
+
+/* Delay the animation for each menu item */
+.menu-item:nth-child(1) {
+    animation-delay: 0s;
+}
+.menu-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.menu-item:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.menu-item:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+/* Adding a hover effect to menu items */
+.menu-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    transition: transform 0.3s ease;
+}

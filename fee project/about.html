@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>About Us</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./nav.css"> -->
+    <link rel="icon" type="image/png" href="./images/logo.jpg">
+<style>
+  nav {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1vm 8vm;
+  background: rgba(113, 254, 113, 0.578);
+}
+
+nav img {
+  width: 150px;
+  height: 150px;
+  margin-right: 350px;
+}
+
+nav .navigation ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 150px;
+}
+
+nav .navigation ul li {
+  list-style: none;
+  margin-left: 40px;
+}
+
+nav .navigation ul li a {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  color: black;
+}
+
+nav .navigation ul li a:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+nav img:hover {
+  width: 200px;
+  height: 200px;
+  border: 1px solid;
+}
+
+nav .navigation ul li a:active {
+  color: red;
+  cursor: pointer;
+}
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    flex-wrap: wrap;
+}
+
+h1{
+    animation-duration: 1s;
+    animation-name: slide-in;
+  }
+  
+  @keyframes slide-in {
+    from {
+      translate: 150vw 0;
+      scale: 200% 1;
+    }
+  
+    to {
+      translate: 0 0;
+      scale: 100% 1;
+    }
+  }
+
+h2{
+  animation-duration: 3s;
+  animation-name: pulse;
+}
+
+@keyframes pulse {
+  from {
+    translate: 2vw 0;
+    scale: 200% 1;
+  }
+
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}
+
+img {
+    border-radius: 20px;
+    width: 80%; /* Make image responsive */
+    /* max-width: 700px; Limit max width */
+}
+.child>h3,h4{
+  color: black;
+}
+body {
+    /* background-color: #1e1e2f; */
+    background: linear-gradient(beige) 100%;
+    color : #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    /* padding: 40px; */
+}
+
+
+.container {
+    padding-top: 100px;
+    margin-top: 100px;
+    /* background-color: #1e1e2f; */
+/* background: linear-gradient(90deg, rgba(0,0,105,1) 35%, rgba(0,33,105,0.8576680672268908) 100%); */
+    border-radius: 15px;
+    padding: 60px;
+    width: 80%;
+    /* max-width: 1200px; */
+    text-align: center;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    margin: 20px;
+}
+
+h1 {
+    color:rgb(7, 60, 7);
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+@media (max-width: 700px){
+  h1{
+    font-size: 23px;
+  }
+  h2{max-width: 18px;}
+}
+h2 {
+    color:black;
+    font-size: 40px;
+    /* margin: 25px 0; */
+}
+
+#profile {
+  width: 250px;
+  height: 250px;
+  color:black;
+  box-shadow: h-offset v-offset blur-radius spread-radius color;
+   }
+
+#child {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 40px;
+          padding: 10px;
+}
+
+.profile {
+          background-color: light rgb(145, 145, 225);
+          width: 300px;
+          height: 600px;
+          text-align: center;
+          padding: 10px;
+          border-radius: 10px;
+          box-shadow: 0px 8px 20px  rgba(0, 0, 0, 0.5);
+}
+
+.profile img{
+  width: 250px;
+  height: 250px;
+}
+
+p {
+    color: #0a0909;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+button {
+    background-color:  #999966;
+    color: #1e1e2f;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #ffc71c;
+    transform: translateY(-2px);
+}
+/* Media Queries */
+@media (max-width: 992px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            #child {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+        .success-message {
+            display: none;
+            /* Hidden by default */
+            color: green;
+            margin-top: 20px;
+            font-size: 18px;
+            transition: opacity 0.5s ease;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        .footer-container div {
+            margin: 20px;
+        }
+
+        .footer-container h3 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .footer-container a {
+            color: #ff6600;
+            text-decoration: none;
+        }
+
+        .footer-container a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            background-color: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .newsletter form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .newsletter input[type="email"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .newsletter button {
+            padding: 10px;
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .newsletter button:hover {
+            background-color: #ff5500;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .social-icons a img {
+            height: 50px;
+            width: 50px;
+        }
+
+
+</style>
+</head>
+
+<body>
+  <nav>
+    <img src="./images/logo.jpg" alt="">
+    <div class="navigation">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="./menu.html ">Menu</a></li>
+            <li><a href="./contact.html">ContactUs</a></li>
+            <li><a href="./feedback.html ">Feedback</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+
+    <div class="container">
+        <h1>About Us</h1>
+        <br>
+        <div class="image-placeholder">
+        <img id="dynamicImage" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGx0IgcEIqRix3oVJltTxnld1I1tZRC0VJaORhA2KBs4RkGj5RxHsoTS07kkrYZNemydeJNR-jtk_8jnzAYzxnvBRlJX2wrtkQOq0UcLg-3MUbOYTUSpGx32R_3vXelj4X7hEieMCRbxB_/s2048/Food+Order+Website+-+PHP+MySQL+-+Vijay+Thapa.jpg" alt="Random Image">
+        </div>
+        <br><br>
+        <h2>Welcome to the YUM DRIVE!</h2>
+        <p>At Yum Drive, we are thrilled to have you here! Our food ordering website is designed to make your dining experience simple, enjoyable, and incredibly satisfying. Whether you're craving a comforting classic, exotic international cuisine, or a healthy option, we have something to tantalize every taste bud.
+
+          What We Offer:
+          A Wide Variety of Choices: From local favorites to gourmet dishes, explore our extensive menu curated from the best restaurants in your area. Choose from an array of cuisines that cater to all preferences, including vegetarian, vegan, gluten-free, and more!
+          
+          Easy Ordering Experience: Our user-friendly website and mobile app take the hassle out of food ordering. With just a few clicks, you can browse menus, customize your order, and track your delivery in real-time.</p>
+        <br><br>
+        <h2>Our Mission</h2>
+        <p>At YumDrive , our mission is simple: to connect people with the joy of great food. We believe that every meal should be a delightful experience, whether you're dining in or enjoying a cozy night at home. We strive to bridge the gap between local restaurants and hungry customers, bringing culinary delights right to your doorstep.
+
+          What Drives Us:
+          
+          Freshness and Quality: We are committed to partnering with reputable, local restaurants that prioritize fresh, high-quality ingredients in their meals. We aim to provide our customers with dishes that not only satisfy their cravings but also nourish their bodies.
+          
+          Convenience and Accessibility: We understand that busy lives often leave little time for meal preparation. Our user-friendly platform ensures that delicious food is just a click away, accessible to everyone regardless of their location or schedule..</p>
+        <br><br>
+        <h2>Meet Our Team</h2>
+        <div id="child">
+        <div class="profile">
+        <img src="./images/nikhil.jpg" alt="">
+        <h3 style="color: black;">TEAM LEADER</h3>
+        <h4><b><strong>Nikhil Khudania</strong></b></h4>
+        <p>2410991799</p>
+        <p>WEB DESIGNER</p>
+        <P>GROUP NUMBER:G-23</P>
+        <p style="font-size: 15px;">E-MAIL:
+            nikhil1799.becse24@chitkara.edu.in</p>
+    </div>
+    <div class="profile">
+        <img src="./images/rishi.jpg" alt="">
+        <h3 style="color: black;">MEMBER 1</h3>
+        <h4><b><strong>Rishi Khudania</strong></b></h4>
+        <p>2410991815</p>
+        <p>WEB DESIGNER</p>
+        <p>GROUP NUMBER: G-23</p>
+        <p style="font-size: 15px;">E-MAIL: rishi1815.becse24@chitkara.edu.in</p>
+        <p></p>
+    </div>
+    <div class="profile">
+        <img src="./images/yashika.jpg" alt="" >
+        <h3 style="color: black;">MEMBER 2</h3>
+        <h4><b><strong>Yashika</strong></b></h4>
+        <p>2410991858</p>
+        <p>WEB DESIGNER</p>
+        <p>GROUP NUMBER: G-23</p>
+        <p style="font-size: 15px;">EMAIL: yashika1858.becse24@chitkara.edu.in</p>
+    </div>
+    </div>
+        <br><br>
+        <h2>Why Choose Us?</h2>
+        <p>We Offer great deals at great Price, Fresh food is prepared in front of mastercheif. We offer delicious food with great service. our Food delivery is always on time and served freshly to the customers . Our goal is to restore your natural balance in mind , body and soul . We focus on quality and sustainable foods are our Top Priority.Choosing us for your food ordering needs means selecting a service that prioritizes quality, convenience, and customer satisfaction. Whether you’re craving a quick meal at home or planning a special gathering, we’re here to deliver deliciousness right to your door. Join our community of satisfied customers and experience the best in food ordering today!</p>
+        <br><br>
+        <h2>Join Us</h2>
+        <p>Are you ready to embark on a journey that will transform the way you think, create and innovate ? At CodeCraft, we are more than just a learning platform — we are a community of dreamers, builders and doers. By joining us, you become part of a movement that believes in the power of coding to change the world. Dive into our interactive and hands-on courses that make coding accessible and fun. Learn from industry experts and gain real-world experience with our comprehensive curriculum. Learn at your own pace, from anywhere, at any time. Our platform is designed to fit into your life, making learning convenient and effective. Join us today and take the first step towards a brighter future. Together, we can code the world into a better place.</p>
+        <br>
+        <button><a href="./index.html">Get Started</a></button>
+    </div>
+    <!-- Main Content of the App -->
+    <div class="content">
+      <!-- Your main content goes here -->
+  </div>
+  
+<footer>
+  <div class="footer-container">
+      <div class="about">
+          <h3>About Us</h3>
+          <p>At Yum Drive, we are thrilled to have you here! Our food ordering website is designed to make your dining experience simple, enjoyable, and incredibly satisfying. Whether you're craving a comforting classic, exotic international cuisine, or a healthy option, we have something to tantalize every taste bud..</p>
+      </div>
+      <div class="contact">
+          <h3>Contact Us</h3>
+          <p>Email: <a href="mailto:support@yumdrive.com">support@learncode.com</a></p>
+          <p>Phone: (123) 456-7890</p>
+          <p>Address: 123 Code Lane, Tech City, Innovation State, 98765</p>
+      </div>
+      <div class="follow">
+          <h3>Follow Us</h3>
+          <p><a href="https://www.facebook.com/learncode" target="_blank">Facebook</a></p>
+          <p><a href="https://www.twitter.com/learncode" target="_blank">Twitter</a></p>
+          <p><a href="https://www.instagram.com/learncode" target="_blank">Instagram</a></p>
+          <p><a href="https://www.linkedin.com/company/learncode" target="_blank">LinkedIn</a></p>
+      </div>
+      <div class="links">
+          <h3>Quick Links</h3>
+          <p><a href="./index.html">Home</a></p>
+          <p><a href="/about.html">About Us</a></p>
+          <p><a href="./menu.html">Menu</a></p>
+          <p><a href="./contact.html">Contact Us</a></p>
+          <p><a href="./feedback.html">Feedback</a></p>
+          <p><a href="#">Privacy Policy</a></p>
+          <p><a href="#">Terms of Service</a></p>
+      </div>
+      <div class="newsletter">
+          <h3>Subscribe to Our Newsletter</h3>
+          <form action="#">
+              <input type="email" placeholder="Enter your email" required>
+              <button type="submit">Subscribe Now</button>
+          </form>
+      </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="social-icons">
+      <a href="https://www.facebook.com/"><img src="https://img.icons8.com/fluency/2x/facebook-new.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com/accounts/login/"><img src="https://img.icons8.com/fluency/2x/instagram-new.png" alt="Instagram"></a>
+      <a href="https://twitter.com/?lang=en"><img src="https://img.icons8.com/fluency/2x/twitter-squared.png" alt="Twitter"></a>
+    </div>
+    <p>Copyright © 2024 by Yum Drive</p>
+  </div>
+</footer> 
+
+
+</body>
+</html>
+  

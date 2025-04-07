@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="signin.css">
+</head>
+<style>
+    body{
+    background: url("./images/bgimg.jpg");
+    background-size: cover;
+    background-repeat: no repeat;
+} 
+.container {
+    width: 400px;
+    margin:150px auto;
+    padding:5px;
+    border: 3px solid #131415;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container h1{
+    color:rgb(7, 17, 13);
+}
+
+
+
+.container input[type="text"], [type="password"],[type="email"] {
+    width: 75%;
+    padding: 7px;
+    margin-bottom: 10px;
+    border: 3px solid #9d9696;
+    border-radius: 10px;
+}
+
+
+
+.container button[type="submit"] {
+    width: 50%;
+    padding: 7px;
+    background-color: #0e1f2D;
+    color: #e1c5c5;
+    border: none;
+    border-radius: 5px;
+}
+
+.container button[type="submit"]:hover {
+    background-color: #b4b776;
+}
+</style>
+<body>
+    <div class="container">
+        <h1>Yum Drive</h1><hr style="size:5; width:125px;">
+        <h2>Sign In</h2>
+
+        <form id="signInForm" action="./index.html" method="GET" onsubmit="return validateForm()">
+            <div>
+                <input type="text" placeholder="First name" name="firstName" required>
+            </div>
+            <br>
+            <div>
+                <input type="text" placeholder="Last name" name="lastName" required>
+            </div>
+            <br>
+            <div>
+                <input type="email" placeholder="Email" name="email" maxlength="50" required>
+            </div>
+            <br>
+            <div>
+                <input type="password" placeholder="Password" name="pwd" required>
+            </div>
+            <br>
+            <div>
+                <input type="password" placeholder="Confirm password" name="confirmPwd" required>
+            </div>
+            <br>
+            <button type="submit" >Sign in</button>
+        </form>
+        <br>
+        <p>Already have an Account? <a href="./index.html">login</a></p>
+    </div>
+
+    <script>
+        function validateForm() {
+            var password = document.getElementsByName("pwd")[0].value;
+            var confirmPassword = document.getElementsByName("confirmPwd")[0].value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return false; 
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
